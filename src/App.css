@@ -1,0 +1,14 @@
+:root {
+  --nb-color: #121619;
+  --nb-color2: #e9edc9ff;
+  --bg-color: #fefae0ff;
+  --bg-color-2: #faedcdff;
+  --text-color: rgb(255, 255, 255);
+  --text-color-2: #999387;
+}
+
+
+li {
+  color: red;
+
+}
