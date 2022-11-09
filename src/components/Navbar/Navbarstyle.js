@@ -5,6 +5,7 @@ export const NavWrapper = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 2;
     align-items: center;
     width: 100%;
     height: 65px;
@@ -15,11 +16,11 @@ export const NavWrapper = styled.nav`
         width: 70px;
         padding-left: 20px;
         margin-left: 10px;
+        transition: transform .7s ease-in-out;
       }
 
       #logo:hover {
         transform: rotate(90deg);
-        transition: 1s ease;
       }
       
       a {
@@ -53,7 +54,7 @@ export const NavWrapper = styled.nav`
       transition: all .5s ease;
       a {
         color: var(--text-color-2);
-        font-size: 2rem;
+        font-size: 1.7rem;
         display: block;
       }
       @media(min-width: 768px){
@@ -70,19 +71,16 @@ export const NavWrapper = styled.nav`
 
     .links.active {
       width: 100%;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       position: absolute;
       margin-left: auto;
       margin-right: auto;
-      top: 200%;
-      left: 20%;
+      top: 100%;
+      left: 35%;
       right: 0;
       text-align: center;
-
-      a {
-        margin-top: 2rem;
-        color: var(--text-color-2);
-      }
     }
 `
 
@@ -101,8 +99,8 @@ export const BgDiv = styled.div`
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      z-index: -1;
+      height: 60%;
+      z-index: 1;
     }
 
 `

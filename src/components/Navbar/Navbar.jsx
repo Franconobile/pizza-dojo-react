@@ -3,6 +3,7 @@ import { NavWrapper } from "./Navbarstyle";
 import { BgDiv } from "./Navbarstyle";
 import { FaUserAlt } from "react-icons/fa"; 
 import { BsCartFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import BurgerBtn from "./BurgerBtn";
 
 const Navbar = () => {
@@ -22,10 +23,11 @@ const Navbar = () => {
           </div>
           <div className="navbar_elements">
               <div className={`links ${clicked ? 'active' : ''}`}>
-              <a onclick={handleClick} href="#h"><FaUserAlt style={{marginRight:'.5rem'}}/>Accede</a>
-              <a onclick={handleClick} href="#h">Productos</a>
-              <a onclick={handleClick} href="#h">Contactanos</a>
-              <a onclick={handleClick} href="#H"><BsCartFill style={{fontSize: "1.5em"}}/></a>
+              <Link to="/" onclick={handleClick}>Inicio</Link>
+              <Link to="/login" onclick={handleClick}><FaUserAlt style={{marginRight:'.5rem'}}/>Accede</Link>
+              <Link to="/products" onclick={handleClick}>Productos</Link>
+              <Link to="/contact" onclick={handleClick}>Contactanos</Link>
+              <Link onclick={handleClick}><BsCartFill style={{fontSize: "1.5em"}}/></Link>
             </div>
           </div>
           <div className="burger">
