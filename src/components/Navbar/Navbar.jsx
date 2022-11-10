@@ -3,7 +3,7 @@ import { NavWrapper } from "./Navbarstyle";
 import { BgDiv } from "./Navbarstyle";
 import { FaUserAlt } from "react-icons/fa"; 
 import { BsCartFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import BurgerBtn from "./BurgerBtn";
 
 const Navbar = () => {

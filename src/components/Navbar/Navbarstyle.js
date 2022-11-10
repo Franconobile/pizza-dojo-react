@@ -85,7 +85,7 @@ export const NavWrapper = styled.nav`
 `
 
 export const BgDiv = styled.div`
-    position: absolute;
+    position: fixed;
     background-color: #121619;
     top: -700px;
     left: -1000px;
