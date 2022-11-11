@@ -1,8 +1,5 @@
 import styled from "styled-components";
-
-export const CategoriasWrapper = styled.section`
-
-`;
+import { motion } from 'framer-motion';
 
 export const ProductosWrapper = styled.section`
   padding-top: 1rem;
@@ -10,27 +7,20 @@ export const ProductosWrapper = styled.section`
 `;
 
 export const ProductosContainer = styled.div`
-  display: grid;
-  place-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, 400px);
-  row-gap: 3rem;
-  width: 100%;
-  padding: 1rem 0;
+display: grid;
+place-items: center;
+justify-content: center;
+grid-template-columns: repeat(auto-fit, 400px);
+row-gap: 3rem;
+width: 100%;
+padding: 1rem 0;
 `;
 
-export const ProductosCard = styled.div`
-  background: black;
-  width: 350px;
-  padding: 1rem;
-  border-radius: 15px;
-  background: #171717;
-
+export const ProductoCard = styled.div`
   img {
     width: 100%;
     margin-bottom: 1.5rem;
   }
-
   h2 {
     color: #FFA925;
     font-weight: 600;
@@ -41,7 +31,22 @@ export const ProductosCard = styled.div`
     font-size: 1.2rem;
     margin: 1.5rem 0;
   }
+
+  .cardItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    width: 350px;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
 `;
+
+
+
 
 export const ContainerPrice = styled.div`
   display: flex;
@@ -54,9 +59,26 @@ export const CardPrice = styled.span`
   font-weight: bold;
 `;
 
-export const ButtonContainerStyled = styled.div`
+
+export const CardCategoria = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 150px;
+  padding: 2rem 0.5rem;
+  cursor: pointer;
+  h2 {
+    font-size: 1rem;
+  }
+`;
+
+export const CategoriasContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 3rem;
+  align-items: center;
+  background-color: black;
+  color: white;
 `;
+

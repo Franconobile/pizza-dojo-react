@@ -1,12 +1,22 @@
-import React, {useState} from "react";
-import { NavWrapper } from "./Navbarstyle";
-import { BgDiv } from "./Navbarstyle";
-import { FaUserAlt } from "react-icons/fa"; 
-import { BsCartFill } from "react-icons/bs";
+import React, {useState} from 'react';
+import userIcon from '../../assets/usericon.png';
+import { CartIcon } from '../Cart/CartIcon';
 import { Link } from 'react-router-dom';
-import BurgerBtn from "./BurgerBtn";
+import { useDispatch, useSelector } from 'react-redux';
+import { UserMenu } from '../UserMenu/UserMenu';
+import { toggleMenu } from '../../redux/features/user/userSlice';
+import { FaUserAlt } from "react-icons/fa"; 
+import { NavWrapper } from './NavbarStyle';
+import { NavbarElements } from './NavbarStyle';
+import { User } from './NavbarStyle';
 
-const Navbar = () => {
+
+export const Navbar = () => {
+  const { currentUser } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const handleToggle = () => {
+    dispatch(toggleMenu());
+  };
 
   const [clicked, setClicked] = useState(false);
   const handleClick = () => {
@@ -14,31 +24,27 @@ const Navbar = () => {
     setClicked(!clicked)
   }
 
-  
-    return (
-        <>
-         <NavWrapper>
-          <div className="navbar_logo">
-            <img src={require('../assets/Pizzalogo.png')} id="logo" alt="Logo"/>
-          </div>
-          <div className="navbar_elements">
-              <div className={`links ${clicked ? 'active' : ''}`}>
-              <Link to="/" onclick={handleClick}>Inicio</Link>
-              <Link to="/login" onclick={handleClick}><FaUserAlt style={{marginRight:'.5rem'}}/>Accede</Link>
-              <Link to="/products" onclick={handleClick}>Productos</Link>
-              <Link to="/contact" onclick={handleClick}>Contactanos</Link>
-              <Link onclick={handleClick}><BsCartFill style={{fontSize: "1.5em"}}/></Link>
-            </div>
-          </div>
-          <div className="burger">
-          <BurgerBtn clicked={clicked} handleClick={handleClick}/>
-          </div>
-         </NavWrapper>
-         <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>
+  return (
 
-
-        </>
-    );
-}
-
-export default Navbar;
+    <NavWrapper>
+      <Link to="/">
+        <img src={require('../assets/Pizzalogo.png')} id="logo" alt="Logo"/>
+      </Link>
+      <NavbarElements>
+        <Link to="/" onclick={handleClick}>Inicio</Link>
+        {currentUser ? (
+          <>
+            <User src={userIcon} onClick={handleToggle} />
+            <UserMenu user={currentUser} />
+          </>
+        ) : (
+          <Link to="/login" onclick={handleClick}><FaUserAlt style={{marginRight:'.5rem'}}/>Accede</Link>
+        )}
+          <Link to="/products" onclick={handleClick}>Productos</Link>
+          <Link to="/contact" onclick={handleClick}>Contactanos</Link>
+        <CartIcon />
+      </NavbarElements>
+    </NavWrapper>
+    
+  );
+};

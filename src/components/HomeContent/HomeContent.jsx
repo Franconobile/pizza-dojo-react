@@ -5,7 +5,7 @@ import { HomeContentWrapper } from "./HomeContentStyle";
 const HomeContent = () => {
   return (
     <HomeContentWrapper>
-        <h1>¡Bienvenido a Pizza Dojo!</h1>
+		<h1>¡Bienvenido a Pizza Dojo!</h1>
         <section className="dojo-info">
 				<div className="dojo-about">
 					<h2>Quizás quieras conocernos:</h2>

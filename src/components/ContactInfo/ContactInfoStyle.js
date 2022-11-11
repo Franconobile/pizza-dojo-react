@@ -20,11 +20,9 @@ export const ContactInfoWrapper = styled.section`
         background-size: cover;
         z-index: -1;
     }
-
     @media screen and (max-width:880px){
         padding: 0px;
     }
-
     .contact-box {
         max-width: 100%;
         display: grid;
@@ -36,23 +34,19 @@ export const ContactInfoWrapper = styled.section`
         box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
         color: #fff;
     }
-
     .izq {
         height: 100%;
         background: url("https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2021/03/30/6063031b90a87.r_d.1083-871-0.jpeg") no-repeat center;
         background-size: cover;
     }
-
     .der {
         padding: 25px 40px;
     }
-
     h2 {
         position: relative;
         padding-bottom: 10px;
         margin-bottom: 10px;
     }
-
     h2:after {
         content: '';
         position: absolute;
@@ -64,7 +58,6 @@ export const ContactInfoWrapper = styled.section`
         border-radius: 2px;
         background-color: #FFA925;
     }
-
     .field {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -74,21 +67,17 @@ export const ContactInfoWrapper = styled.section`
         margin-bottom:  22px;
         transition: .3s;
     }
-
     .field:hover {
         background-color: rgba(0, 0, 0, 0.1);
     }
-
     .field:focus {
         background-color: #fff;
         border: 2px solid rgba(30, 85, 250, 0.47);
     }
-
     .area {
         min-height: 150px;
         resize: none;
     }
-
     .sendBtn {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -99,11 +88,9 @@ export const ContactInfoWrapper = styled.section`
         border: none;
         transition: .3s;
     }
-
     .sendBtn:hover {
         background-color: #C97F0F;
     }
-
     @media screen and (max-width:880px){
         .contact-box {
             grid-template-columns: 1fr;

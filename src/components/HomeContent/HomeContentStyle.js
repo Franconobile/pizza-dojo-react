@@ -22,8 +22,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  padding: 0px 40px;
-  
+  padding: 10px 45px;
 
 }
 
@@ -35,7 +34,7 @@ h1 {
   margin-right: 90px;
   padding: 60px;
   gap: 20px;
-  color: var(--text-color);
+  color: white;
 }
 
 .dojo-about h2{
@@ -64,9 +63,29 @@ h1 {
   height: 400px;
 }
 
-@media(min-width: 768px){
-  padding: 2rem 1rem;
-  flex-direction: column;
+@media screen and (max-width:880px){
+  #pizzaHome {
+    display: none;
+  } 
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  .dojo-info {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .dojo-about {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 `;

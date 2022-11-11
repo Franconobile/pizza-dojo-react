@@ -1,2 +1,1 @@
-export const INITIAL_LIMIT = 6;
-export const SHIPPING_COST = 500;
+export const COSTO_ENVIO = 250;
