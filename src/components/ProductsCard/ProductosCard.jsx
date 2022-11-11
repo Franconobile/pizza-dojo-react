@@ -35,7 +35,7 @@ const ProductosCard = ({ setAbrirPopup }) => {
             onClick={() => setcategoria(category.categoria)}
             selected={category.categoria === categoria}
           >
-            <img src={category.imgTag}></img>
+            <img src={category.imgTag} alt={category.name}></img>
             <p>{category.categoria}</p>
           </CardCategoria >
         ))}
